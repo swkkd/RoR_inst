@@ -1,0 +1,15 @@
+{
+  "name": "RoR_inst",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
