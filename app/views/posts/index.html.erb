@@ -1,0 +1,46 @@
+<style>
+  	text{color: #bfbfbf}
+  	.links{
+  		font-size: 16px;
+  	}
+  	a:visited{
+  		color: grey;
+  		text-decoration: none;
+  	}
+  	a:hover{
+  		color: #bfbfbf;
+  		text-decoration: none;
+  	}
+  	a:link{
+  		color: grey;
+  		text-decoration: none;
+  	}
+ </style>
+
+
+
+<% @posts.each do |x| %>
+  <div class="white">
+  	<div class="links">
+<%= link_to "View post", post_path(x), html_options = {:method => :get} %> 
+	</div>
+				  		<hr>
+  	<div>
+<%= image_tag x.image.url(:medium) %></div>
+		<hr>
+		<%- if  x.description==""%>
+
+		<%else%>
+		<text>Description: </text>
+		<%= x.description %>
+  		<hr>
+  		<% end -%>
+  		<text>Created at:</text><br>
+<% abc = x.created_at.to_date %>
+<%= abc.to_s.tr('-', ' ') %>
+  </div>
+<% end %>
+
+
+
+ 
